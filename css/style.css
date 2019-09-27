@@ -131,6 +131,7 @@ a.f-size {
     background: url(../images/banner.png);
     background-size: cover;
     background-repeat: no-repeat;
+    margin-top: 223px;
 }
 #section-banner h2{
     font-weight: 400;
@@ -339,9 +340,27 @@ h3 {
  .db{
         display: none;
     }
+.logo img {
+    display: block;
+    margin: 0 auto;
+    width: 65% !important;
+}
+#section-banner {
+  
+    margin-top: 240px;
+}
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+    #section-banner {
+   
+    margin-top: 240px;
+}
+.logo img {
+    display: block;
+    margin: 0 auto;
+    width: 65% !important;
+}
     .db{
         display: none;
     }
