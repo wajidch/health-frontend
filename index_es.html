@@ -478,10 +478,14 @@ arreglarse, y salir</h3>
 <section id=footer-t class="py-5 bg-b">
 <div class=container>
 <h3 class=text-white>Completa este formulario para ver si califica para CDPAP</h3>
-<form class=my-5>
+<form class="gform my-5"  method="POST" 
+action="https://script.google.com/macros/s/AKfycbwyc5ymmkEuswdCCN-AtAHfiYd0oPm1xGr6_6OLsA/exec">
+<div class="thankyou_message" style="display:none">
+  <h3 style="color:white !important">¡Gracias por contactarnos! ¡Nos pondremos en contacto con usted pronto!</h3>
+</div>
 <div class=row>
 <div class=col-md-6>
-<input type=text class=form-control placeholder="*First Name">
+<input type=text class=form-control id="name" name="name" placeholder="*First Name">
 </div>
 <div class=col-md-6></div>
 <div class=col-md-6>
@@ -489,26 +493,26 @@ arreglarse, y salir</h3>
 </div>
 <div class=col-md-6></div>
 <div class=col-md-6>
-<input type=text class=form-control placeholder="*Phone Number">
+<input type=text class=form-control id="Phone Number" name="Phone Number" placeholder="*Phone Number">
 </div>
 <div class=col-md-6></div>
 <div class=col-md-6>
-<input type=email class=form-control placeholder="*Email address">
+<input type=email id="email" name="email" class=form-control placeholder="*Email address">
 </div>
 <div class="col-md-6 text-center mb-5">
 <div class=btn-overlay></div>
-<button type=button class="btn btn-success border-0 btn-h">Enviar</button>
+<button  class="btn btn-success border-0 btn-h">Enviar</button>
 </div>
 <div class="col-md-6 mb-3">
 <h4 class=text-white>Â¿Eres el paciente?</h4>
 </div>
 <div class="col-md-6 text-right">
 <div class="form-check form-check-inline">
-<input class=form-check-input type=radio name=inlineRadioOptions id=inlineRadio1 value=option1>
+<input class=form-check-input type=radio  value=option1>
 <label class="form-check-label text-white" for=inlineRadio1>Si</label>
 </div>
 <div class="form-check form-check-inline">
-<input class=form-check-input type=radio name=inlineRadioOptions id=inlineRadio2 value=option2>
+<input class=form-check-input type=radio  value=option2>
 <label class="form-check-label text-white" for=inlineRadio2>No</label>
 </div>
 </div>
@@ -517,11 +521,11 @@ arreglarse, y salir</h3>
 </div>
 <div class="col-md-6 text-right">
 <div class="form-check form-check-inline">
-<input class=form-check-input type=radio name=inlineRadioOptions id=inlineRadio1 value=option1>
+<input class=form-check-input type=radio  value=option1>
 <label class="form-check-label text-white" for=inlineRadio1>Si</label>
 </div>
 <div class="form-check form-check-inline">
-<input class=form-check-input type=radio name=inlineRadioOptions id=inlineRadio2 value=option2>
+<input class=form-check-input type=radio  value=option2>
 <label class="form-check-label text-white" for=inlineRadio2>No</label>
 </div>
 </div>
@@ -556,6 +560,8 @@ arreglarse, y salir</h3>
 <a href class=text-white><i class="fa fa-linkedin" aria-hidden=true></i></a>
 </div>
 </section>
+<script data-cfasync="false" src="form-submision-handler.js"></script>
+
 <link href=https://assets.calendly.com/assets/external/widget.css rel=stylesheet>
 <script src=https://assets.calendly.com/assets/external/widget.js type=text/javascript></script>
 <script type=text/javascript>Calendly.initBadgeWidget({url:"https://calendly.com/healthaide",text:"Schedule Consultation",color:"#00a2ff",textColor:"#ffffff",branding:false});</script>
