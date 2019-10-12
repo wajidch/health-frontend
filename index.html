@@ -77,6 +77,8 @@ a person who</span> loves you.</h2>
 <section id=section-4 class=py-5>
 <div class=container>
 <h2 class="text-center clr-g">Google reviews</h2>
+<script src="https://googlereviews.cws.net/google-reviews.js"></script><br />
+<script>load_google_reviews("ChIJtemRg_pbwokRKCpQq6jd7Kk");</script>
 <div id=carousel-example-1z class="carousel slide carousel-fade mt-5" data-ride=carousel>
 <div class=carousel-inner role=listbox>
 <div class="carousel-item active">
@@ -506,11 +508,11 @@ action="https://script.google.com/macros/s/AKfycbwyc5ymmkEuswdCCN-AtAHfiYd0oPm1x
 </div>
 <div class="col-md-6 text-right">
 <div class="form-check form-check-inline">
-<input class=form-check-input type=radio  value=option1>
-<label class="form-check-label text-white" for=inlineRadio1>Yes</label>
+<input class=form-check-input type=radio id="Yes" name='Are you the patient' value="Yes" >
+<label class="form-check-label text-white"  for=inlineRadio1>Yes</label>
 </div>
 <div class="form-check form-check-inline">
-<input class=form-check-input type=radio  value=option2>
+<input class=form-check-input type=radio id="No" name='Are you the patient'   value="No" checked>
 <label class="form-check-label text-white" for=inlineRadio2>No</label>
 </div>
 </div>
@@ -519,11 +521,11 @@ action="https://script.google.com/macros/s/AKfycbwyc5ymmkEuswdCCN-AtAHfiYd0oPm1x
 </div>
 <div class="col-md-6 text-right">
 <div class="form-check form-check-inline">
-<input class=form-check-input type=radio  value=option1>
+<input class=form-check-input type=radio id="Yes" name='Does the patient require home care services'   value="Yes">
 <label class="form-check-label text-white" for=inlineRadio1>Yes</label>
 </div>
 <div class="form-check form-check-inline">
-<input class=form-check-input type=radio  value=option2>
+<input class=form-check-input type=radio id="No" name='Does the patient require home care services'   value="No" checked>
 <label class="form-check-label text-white" for=inlineRadio2>No</label>
 </div>
 </div>
