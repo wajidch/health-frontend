@@ -25,21 +25,25 @@
 <a href=#section-4>Clientes</a>
 <a href=#footer-t>Contacto</a>
 </div>
-<header class="py-4 sticky-top">
+<header class="py-4">
 <div class=container>
 <div class=logo><img src=images/logo.png class="img-fluid d-block m-auto" style=width:400px alt></div>
-<div class="row py-3">
-<div class="col pr-0">
-<a href=tel:3476206226 class="btn-w text-white"><i class="zmdi zmdi-phone-in-talk zmdi-hc-fw mr-2 bg-g"></i> Â¿Soy yo elegible?</a>
-</div>
-<div class="col pl-0">
-<div class=text-right>
-<a href=index.html class=lng>EN</a>
-<a href=index_es.html class=lng>ES</a>
-<a href=# class="border-0 f-size ml-2 menu-btn" onclick=openNav()><i class="fa fa-bars text-white" aria-hidden=true></i></a>
-</div>
-</div>
-</div>
+<div class="bg-b top-navbar" data-toggle="sticky-onscroll">
+    <div class=container>
+  <div class="row py-3">
+  <div class="col pr-0">
+  <a href=tel:3476206226 class="btn-w text-white"><i class="zmdi zmdi-phone-in-talk zmdi-hc-fw mr-2 bg-g"></i> Â¿Soy yo elegible?</a>
+  </div>
+  <div class="col pl-0">
+  <div class=text-right>
+  <a href=index.html class=lng>EN</a>
+  <a href=index_es.html class=lng>ES</a>
+  <a href=# class="border-0 f-size ml-2 menu-btn" onclick=openNav()><i class="fa fa-bars text-white" aria-hidden=true></i></a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
 </div>
 </header>
 <section id=section-banner class=py-5 style=margin-top:0!important>
@@ -568,5 +572,43 @@ action="https://script.google.com/macros/s/AKfycbwyc5ymmkEuswdCCN-AtAHfiYd0oPm1x
 <script src=js/jquery-3.3.1.min.js></script>
 <script src=js/bootstrap.min.js></script>
 <script>function openNav(){document.getElementById("mySidenav").style.width="250px"}function closeNav(){document.getElementById("mySidenav").style.width="0"};</script>
+
+<script>
+	
+
+    // Sticky navbar
+    // =========================
+                $(document).ready(function () {
+                    // Custom function which toggles between sticky class (is-sticky)
+                    var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
+                        var stickyHeight = sticky.outerHeight();
+                        var stickyTop = stickyWrapper.offset().top;
+                        if (scrollElement.scrollTop() >= stickyTop) {
+                            stickyWrapper.height(stickyHeight);
+                            sticky.addClass("is-sticky");
+                        }
+                        else {
+                            sticky.removeClass("is-sticky");
+                            stickyWrapper.height('auto');
+                        }
+                    };
+    
+                    // Find all data-toggle="sticky-onscroll" elements
+                    $('[data-toggle="sticky-onscroll"]').each(function () {
+                        var sticky = $(this);
+                        var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+                        sticky.before(stickyWrapper);
+                        sticky.addClass('sticky');
+    
+                        // Scroll & resize events
+                        $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
+                            stickyToggle(sticky, stickyWrapper, $(this));
+                        });
+    
+                        // On page load
+                        stickyToggle(sticky, stickyWrapper, $(window));
+                    });
+                });
+    </script>
 </body>
 </html>
